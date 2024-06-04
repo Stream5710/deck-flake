@@ -7,5 +7,5 @@ default:
 # apply changes in home.nix
 deploy:
   # TODO: apply flakes
-  @home-manager switch
+  @home-manager switch --flake .
   
