@@ -7,13 +7,15 @@ For now there's not really much but it installs some command line tools.
 
 - I'm still a Nix newbie. There might be some dirty codes inside.
 - This enables unfree packages. Currently this doesn't install anything unfree but I'm planning to include VSCode.
-- Using keyboard or ssh is strongly recommended, since you're typing some commands.
+- Using keyboard or ssh is strongly recommended, since you're going to type some commands.
 
 ## Installation
 
 This assumes your Steam Deck is running SteamOS 3.5 or later. 
-1. [Setup Nix package manager.](https://xpressrazor.wordpress.com/2024/01/11/using-nix-packages-in-steam-deck/)
-2. Enable flakes:
+1. [Setup Nix package manager.](https://xpressrazor.wordpress.com/2024/01/11/using-nix-packages-in-steam-deck/) 
+Alternatively, you can also use [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer) to install Nix.
+2. Enable flakes:  
+**If you used Determinate Nix Installer, skip this step!** `flakes` is already enabled in your case.
 ```
 # ~/.config/nix/nix.conf
 
