@@ -18,6 +18,9 @@ This assumes your Steam Deck is running SteamOS 3.5 or later.
 ```sh
 $ nix --experimental-features 'nix-command flakes' run home-manager/master -- init --switch /path/to/this_repo
 ```
+> [!WARNING]
+> Do not create `~/.config/nix/nix.conf` as another way to enable flakes! Doing so will result in Home Manager activation error.
+
 After the initial activation, you can also use:
 ```sh
 $ cd /path/to/this_repo
