@@ -13,18 +13,10 @@ For now there's not really much but it installs some command line tools.
 
 This assumes your Steam Deck is running SteamOS 3.5 or later. 
 1. [Setup Nix package manager.](https://xpressrazor.wordpress.com/2024/01/11/using-nix-packages-in-steam-deck/) 
-Alternatively, you can also use [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer) to install Nix.
-2. Enable flakes:  
-**If you used Determinate Nix Installer, skip this step!** `flakes` is already enabled in your case.
-```
-# ~/.config/nix/nix.conf
-
-experimental-features = nix-command flakes
-```
-3. Clone this repo. Either use `git clone` or click `Download ZIP` on GitHub web and extract it.
-4. Apply the change:
+2. Clone this repo. Either use `git clone` or click `Download ZIP` on GitHub web and extract it.
+3. Apply the change:
 ```sh
-$ nix run home-manager/master -- init --switch /path/to/this_repo
+$ nix --experimental-features 'nix-command flakes' run home-manager/master -- init --switch /path/to/this_repo
 ```
 After the initial activation, you can also use:
 ```sh
