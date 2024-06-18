@@ -50,12 +50,19 @@
     # '')
 
     micro # micro text editor
-	just # just command runner to make it easier to do nix things
-	eza # ls but better
-	bat # cat but better
-	fastfetch # steamos is arch-based btw
-	gh
+	  just # just command runner to make it easier to do nix things
+	  eza # ls but better
+	  bat # cat but better
+	  fastfetch # steamos is arch-based btw
+	  gh # GitHub CLI
+    vscode-fhs
+    nil # Nix LSP
   ];
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
